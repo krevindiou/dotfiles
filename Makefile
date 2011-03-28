@@ -1,6 +1,9 @@
 DOTFILES_DIR := $(shell pwd)
+DATE := $(shell date +%Y%m%d_%H%M%S)
+BACKUP_DIR := ~/dotfiles_backup/$(DATE)
 
 install: 
+	@$(MAKE) git-submodule
 	@$(MAKE) backup
 	@$(MAKE) install-oh-my-zsh
 	@$(MAKE) install-vim
@@ -9,17 +12,22 @@ install:
 	@echo "| chsh -s /bin/zsh && zsh |"
 	@echo "==========================="
 
+git-submodule: 
+	@echo "* Git submodule..."
+	@git submodule init
+	@git submodule update
+
 backup:
 	@echo "* config backup..."
-	@mkdir -p ~/dotfiles_backup
+	@mkdir -p $(BACKUP_DIR)
 	@if test -e ~/.zshrc; then \
-		cp ~/.zshrc ~/dotfiles_backup/zshrc; \
+		cp ~/.zshrc $(BACKUP_DIR)/zshrc; \
 	fi
 	@if test -e ~/.vim; then \
-		cp -Rf ~/.vim ~/dotfiles_backup/vim; \
+		cp -Rf ~/.vim $(BACKUP_DIR)/vim; \
 	fi
 	@if test -e ~/.vimrc; then \
-		cp ~/.vimrc ~/dotfiles_backup/vimrc; \
+		cp ~/.vimrc $(BACKUP_DIR)/vimrc; \
 	fi
 
 install-oh-my-zsh:
