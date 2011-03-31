@@ -43,8 +43,6 @@ install-oh-my-zsh:
 install-vim:
 	@echo "* VIM config..."
 	@mkdir -p ~/.vim
-	@cp -Rf $(DOTFILES_DIR)/vip/.vim/* ~/.vim
-	@cp -f $(DOTFILES_DIR)/vip/.vimrc ~
-	@# Execute php-doc.vim
-	@/bin/sh -c . ~/.vim/php-doc.vim
+	@cp -Rf $(DOTFILES_DIR)/vim/* ~/.vim
+	@cp -f $(DOTFILES_DIR)/vimrc ~/.vimrc
 
