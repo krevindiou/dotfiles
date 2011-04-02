@@ -13,3 +13,6 @@
 [submodule "vim/bundle/nerdcommenter"]
 	path = vim/bundle/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
+[submodule "vim/bundle/ManPageView"]
+	path = vim/bundle/ManPageView
+	url = https://github.com/vim-scripts/ManPageView.git
