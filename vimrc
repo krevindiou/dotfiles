@@ -9,6 +9,9 @@ autocmd VimEnter * wincmd p
 autocmd BufEnter * NERDTreeMirror
 let NERDTreeShowHidden=1
 
+" Ack
+let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+
 " PHP
 noremap <C-P><ESC> :call PhpDocSingle()<CR>i
 nnoremap <C-P> :call PhpDocSingle()<CR>
