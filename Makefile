@@ -42,7 +42,8 @@ install-oh-my-zsh:
 
 install-vim:
 	@echo "* VIM config..."
-	@mkdir -p ~/.vim
+	@rm -rf ~/.vim
+	@mkdir ~/.vim
 	@cp -Rf $(DOTFILES_DIR)/vim/* ~/.vim
 	@cp -f $(DOTFILES_DIR)/vimrc ~/.vimrc
 
