@@ -21,7 +21,9 @@ autocmd FileType php noremap <C-L> :!/usr/bin/env php -l %<CR>
 " General
 set nu
 syntax on
-colorscheme desert
+set t_Co=256
+colorscheme wombat256
+set mouse=a
 set encoding=utf-8
 set fileencoding=utf-8
 set autoindent
@@ -32,6 +34,8 @@ set shiftwidth=4
 set softtabstop=4
 set list
 set listchars=nbsp:¤,tab:>-,trail:¤,extends:>,precedes:<,eol:¶,trail:·
+set colorcolumn=120
+highlight ColorColumn ctermbg=gray guibg=gray
 let mapleader = ','
 
 if filereadable(".vimrc.local")
