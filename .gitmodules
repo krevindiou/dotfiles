@@ -16,3 +16,6 @@
 [submodule "vim/bundle/ManPageView"]
 	path = vim/bundle/ManPageView
 	url = https://github.com/vim-scripts/ManPageView.git
+[submodule "vim/bundle/taglist"]
+	path = vim/bundle/taglist
+	url = https://github.com/mexpolk/vim-taglist.git
