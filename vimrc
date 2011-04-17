@@ -14,6 +14,10 @@ let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
 " Tag List
 nnoremap <silent> <F8> :TlistToggle<CR>
+let Tlist_Exit_OnlyWindow=1
+
+" easytags
+set tags=./.tags;,~/.vimtags
 
 " PHP
 noremap <C-P><ESC> :call PhpDocSingle()<CR>i
@@ -22,6 +26,13 @@ vnoremap <C-P> :call PhpDocRange()<CR>
 autocmd FileType php noremap <C-L> :!/usr/bin/env php -l %<CR>
 autocmd BufWritePre *.php :%s/\s\+$//e
 let php_noShortTags=1
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+
+" Javascript
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+
+" CSS
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 
 " General
 set nu
