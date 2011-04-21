@@ -46,4 +46,5 @@ install-vim:
 	@mkdir ~/.vim
 	@cp -Rf $(DOTFILES_DIR)/vim/* ~/.vim
 	@cp -f $(DOTFILES_DIR)/vimrc ~/.vimrc
+	@cd ~/.vim/bundle/Command-T && rake make && cd -
 
