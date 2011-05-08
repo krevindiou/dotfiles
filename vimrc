@@ -24,10 +24,23 @@ set tags=./.tags;,~/.vimtags
 let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
 
-" PHP
+" PDV
 noremap <C-P><ESC> :call PhpDocSingle()<CR>i
 nnoremap <C-P> :call PhpDocSingle()<CR>
 vnoremap <C-P> :call PhpDocRange()<CR>
+func! PDVLocalSettings()
+    let g:pdv_cfg_Author = "krevindiou <krevindiou@users.noreply.github.com>"
+    let g:pdv_cfg_Copyright = "Copyright (C) 2011 krevindiou"
+    let g:pdv_cfg_License = "GNU GPL version 3 {@link http://www.gnu.org/licenses/gpl-3.0.txt}"
+    let g:pdv_cfg_Uses = 0
+    let g:pdv_cfg_php4always = 0
+endfunc
+au BufRead,BufNewFile *.php call PDVLocalSettings()
+
+" Snipmate
+let g:snips_author = "krevindiou <krevindiou@users.noreply.github.com>"
+
+" PHP
 autocmd FileType php noremap <C-L> :!/usr/bin/env php -l %<CR>
 autocmd BufWritePre *.php :%s/\s\+$//e
 let php_noShortTags=1
@@ -61,6 +74,9 @@ let mapleader = ','
 set hlsearch
 set foldenable
 set foldmethod=syntax
+if has('gui_running')
+    set guifont=DejaVu\ Sans\ Mono\ Bold\ 9
+endif
 
 " Close all open buffers on entering a window if the only
 " buffer that's left is the NERDTree buffer
