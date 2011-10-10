@@ -18,7 +18,7 @@
 	url = https://github.com/vim-scripts/ManPageView.git
 [submodule "vim/bundle/taglist"]
 	path = vim/bundle/taglist
-	url = https://github.com/mexpolk/vim-taglist.git
+	url = https://github.com/vim-scripts/taglist.vim.git
 [submodule "vim/bundle/easytags"]
 	path = vim/bundle/easytags
 	url = https://github.com/vim-scripts/easytags.vim.git
