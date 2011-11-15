@@ -9,6 +9,7 @@ autocmd VimEnter * wincmd p
 autocmd BufEnter * NERDTreeMirror
 autocmd WinEnter * call s:CloseIfOnlyNerdTreeLeft()
 let NERDTreeShowHidden=1
+let NERDTreeShowBookmarks=1
 
 " Ack
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
