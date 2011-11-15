@@ -59,6 +59,9 @@ autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 " HTML
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 
+" Twig
+autocmd BufRead,BufNewFile *.twig set syntax=jinja
+
 " General
 set nu
 syntax on
