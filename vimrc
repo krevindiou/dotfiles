@@ -46,11 +46,17 @@ autocmd BufWritePre *.php :%s/\s\+$//e
 let php_noShortTags=1
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 
+" Python
+autocmd FileType python set omnifunc=pythoncomplete#Complete
+
 " Javascript
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 
 " CSS
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+
+" HTML
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 
 " General
 set nu
