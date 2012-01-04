@@ -31,7 +31,7 @@ nnoremap <C-P> :call PhpDocSingle()<CR>
 vnoremap <C-P> :call PhpDocRange()<CR>
 func! PDVLocalSettings()
     let g:pdv_cfg_Author = "krevindiou <krevindiou@users.noreply.github.com>"
-    let g:pdv_cfg_Copyright = "Copyright (C) 2011 krevindiou"
+    let g:pdv_cfg_Copyright = "Copyright (C) 2012 krevindiou"
     let g:pdv_cfg_License = "GNU GPL version 3 {@link http://www.gnu.org/licenses/gpl-3.0.txt}"
     let g:pdv_cfg_Uses = 0
     let g:pdv_cfg_php4always = 0
@@ -78,7 +78,9 @@ set shiftwidth=4
 set softtabstop=4
 set list
 set listchars=nbsp:¤,tab:>-,trail:¤,extends:>,precedes:<,eol:¶,trail:·
-set colorcolumn=120
+if exists('+colorcolumn')
+  set colorcolumn=120
+endif
 highlight ColorColumn ctermbg=gray guibg=gray
 let mapleader = ','
 set hlsearch
@@ -104,4 +106,3 @@ endfunction
 if filereadable(".vimrc.local")
     source .vimrc.local
 endif
-
