@@ -66,6 +66,9 @@ autocmd BufRead,BufNewFile *.twig set syntax=jinja
 vmap <Tab> >gv
 vmap <S-Tab> <gv
 
+" Map Select All
+noremap <C-A> ggVG
+
 " General
 set nu
 syntax on
