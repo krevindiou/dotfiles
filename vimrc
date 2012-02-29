@@ -62,6 +62,10 @@ autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 " Twig
 autocmd BufRead,BufNewFile *.twig set syntax=jinja
 
+" Map tab key
+vmap <Tab> >gv
+vmap <S-Tab> <gv
+
 " General
 set nu
 syntax on
