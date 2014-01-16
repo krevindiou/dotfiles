@@ -72,8 +72,9 @@ noremap <C-A> ggVG
 " General
 set nu
 syntax on
+set background=dark
 set t_Co=256
-colorscheme wombat256
+colorscheme solarized
 set mouse=a
 set encoding=utf-8
 set fileencoding=utf-8

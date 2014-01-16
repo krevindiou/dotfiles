@@ -36,7 +36,7 @@ install-oh-my-zsh:
 	@cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 	@echo "export PATH=$$PATH" >> ~/.zshrc
 	@# Theme update
-	@sed -i 's/\"robbyrussell\"/\"gentoo\"/' ~/.zshrc
+	@sed -i 's/\"robbyrussell\"/\"agnoster\"/' ~/.zshrc
 	@# Execute .zshrc
 	@/bin/sh -c . ~/.zshrc
 
