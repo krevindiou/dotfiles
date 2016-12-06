@@ -1,6 +1,6 @@
 \set QUIET 1
 \set PROMPT1 '%[%033[1;32m%]%n%[%033[0m%]@%[%033[1;36m%]%M:%>%[%033[0m%] %[%033[1;34m%][%/]%[%033[0m%]%R%#%x '
-\set PROMPT2 '%[%033[1;32m%]%n%[%033[0m%]@%[%033[1;36m%]%M:%>%[%033[0m%] %[%033[1;34m%][%/]%[%033[0m%]%R%#%x '
+\set PROMPT2 '%[%033[1;34m%][%/]%[%033[0m%]%R%#%x '
 \set VERBOSITY verbose
 \pset null '(NULL)'
 \set COMP_KEYWORD_CASE upper
