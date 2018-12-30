@@ -3,14 +3,6 @@ filetype off
 call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
 
-" NERDTree
-autocmd VimEnter * NERDTree
-autocmd VimEnter * wincmd p
-autocmd BufEnter * NERDTreeMirror
-autocmd WinEnter * call s:CloseIfOnlyNerdTreeLeft()
-let NERDTreeShowHidden=1
-let NERDTreeShowBookmarks=1
-
 " Ack
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
@@ -37,9 +29,6 @@ func! PDVLocalSettings()
     let g:pdv_cfg_php4always = 0
 endfunc
 au BufRead,BufNewFile *.php call PDVLocalSettings()
-
-" Snipmate
-let g:snips_author = "krevindiou <krevindiou@users.noreply.github.com>"
 
 " PHP
 autocmd FileType php noremap <C-L> :!/usr/bin/env php -l %<CR>
@@ -97,19 +86,6 @@ set foldmethod=syntax
 if has('gui_running')
     set guifont=DejaVu\ Sans\ Mono\ Bold\ 9
 endif
-
-" Close all open buffers on entering a window if the only
-" buffer that's left is the NERDTree buffer
-function! s:CloseIfOnlyNerdTreeLeft()
-    if exists("t:NERDTreeBufName")
-        if bufwinnr(t:NERDTreeBufName) != -1
-            if winnr("$") == 1
-                q
-            endif
-        endif
-    endif
-endfunction
-
 
 if filereadable(".vimrc.local")
     source .vimrc.local
