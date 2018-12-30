@@ -13,10 +13,6 @@ let Tlist_Exit_OnlyWindow=1
 " easytags
 set tags=./.tags;,~/.vimtags
 
-" supertab
-let g:SuperTabDefaultCompletionType = "context"
-let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
-
 " PDV
 noremap <C-P><ESC> :call PhpDocSingle()<CR>i
 nnoremap <C-P> :call PhpDocSingle()<CR>
