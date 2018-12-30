@@ -1,9 +1,6 @@
 [submodule "vim/bundle/Command-T"]
 	path = vim/bundle/Command-T
 	url = https://github.com/wincent/Command-T.git
-[submodule "vim/bundle/ack"]
-	path = vim/bundle/ack
-	url = https://github.com/mileszs/ack.vim.git
 [submodule "vim/bundle/ManPageView"]
 	path = vim/bundle/ManPageView
 	url = https://github.com/vim-scripts/ManPageView.git

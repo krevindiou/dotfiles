@@ -3,28 +3,12 @@ filetype off
 call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
 
-" Ack
-let g:ackprg="ack-grep -H --nocolor --nogroup --column"
-
 " Tag List
 nnoremap <silent> <F8> :TlistToggle<CR>
 let Tlist_Exit_OnlyWindow=1
 
 " easytags
 set tags=./.tags;,~/.vimtags
-
-" PDV
-noremap <C-P><ESC> :call PhpDocSingle()<CR>i
-nnoremap <C-P> :call PhpDocSingle()<CR>
-vnoremap <C-P> :call PhpDocRange()<CR>
-func! PDVLocalSettings()
-    let g:pdv_cfg_Author = "krevindiou <krevindiou@users.noreply.github.com>"
-    let g:pdv_cfg_Copyright = "Copyright (C) 2012 krevindiou"
-    let g:pdv_cfg_License = "GNU GPL version 3 {@link http://www.gnu.org/licenses/gpl-3.0.txt}"
-    let g:pdv_cfg_Uses = 0
-    let g:pdv_cfg_php4always = 0
-endfunc
-au BufRead,BufNewFile *.php call PDVLocalSettings()
 
 " PHP
 autocmd FileType php noremap <C-L> :!/usr/bin/env php -l %<CR>
