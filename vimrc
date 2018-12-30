@@ -42,3 +42,6 @@ endif
 if filereadable(".vimrc.local")
     source .vimrc.local
 endif
+
+call plug#begin('~/.vim/plugged')
+call plug#end()
