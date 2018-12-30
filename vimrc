@@ -3,9 +3,6 @@ autocmd FileType php noremap <C-L> :!/usr/bin/env php -l %<CR>
 autocmd BufWritePre *.php :%s/\s\+$//e
 let php_noShortTags=1
 
-" Twig
-autocmd BufRead,BufNewFile *.twig set syntax=jinja
-
 " Map tab key
 vmap <Tab> >gv
 vmap <S-Tab> <gv
