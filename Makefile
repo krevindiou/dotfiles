@@ -3,15 +3,9 @@ DATE := $(shell date +%Y%m%d_%H%M%S)
 BACKUP_DIR := ~/dotfiles_backup/$(DATE)
 
 install:
-	@$(MAKE) git-submodule
 	@$(MAKE) backup
 	@$(MAKE) install-bash-it
 	@$(MAKE) install-vim
-
-git-submodule:
-	@echo "* Git submodule..."
-	@git submodule init
-	@git submodule update
 
 backup:
 	@echo "* config backup..."
@@ -36,6 +30,4 @@ install-vim:
 	@echo "* VIM config..."
 	@rm -rf ~/.vim
 	@mkdir ~/.vim
-	@cp -Rf $(DOTFILES_DIR)/vim/* ~/.vim
 	@cp -f $(DOTFILES_DIR)/vimrc ~/.vimrc
-	@cd ~/.vim/bundle/Command-T && rake make && cd -
