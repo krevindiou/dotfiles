@@ -3,13 +3,6 @@ filetype off
 call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
 
-" Tag List
-nnoremap <silent> <F8> :TlistToggle<CR>
-let Tlist_Exit_OnlyWindow=1
-
-" easytags
-set tags=./.tags;,~/.vimtags
-
 " PHP
 autocmd FileType php noremap <C-L> :!/usr/bin/env php -l %<CR>
 autocmd BufWritePre *.php :%s/\s\+$//e

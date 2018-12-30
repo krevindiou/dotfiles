@@ -4,12 +4,6 @@
 [submodule "vim/bundle/ManPageView"]
 	path = vim/bundle/ManPageView
 	url = https://github.com/vim-scripts/ManPageView.git
-[submodule "vim/bundle/taglist"]
-	path = vim/bundle/taglist
-	url = https://github.com/vim-scripts/taglist.vim.git
-[submodule "vim/bundle/easytags"]
-	path = vim/bundle/easytags
-	url = https://github.com/vim-scripts/easytags.vim.git
 [submodule "vim/bundle/fugitive"]
 	path = vim/bundle/fugitive
 	url = https://github.com/tpope/vim-fugitive.git
