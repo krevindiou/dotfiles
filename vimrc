@@ -15,6 +15,7 @@ set nu
 syntax on
 set background=dark
 set t_Co=256
+let g:solarized_termcolors=256
 colorscheme solarized
 set mouse=a
 set encoding=utf-8
