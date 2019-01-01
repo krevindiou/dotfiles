@@ -36,6 +36,8 @@ let mapleader = ','
 set hlsearch
 set foldenable
 set foldmethod=syntax
+set laststatus=2
+set noshowmode
 if has('gui_running')
     set guifont=DejaVu\ Sans\ Mono\ Bold\ 9
 endif
@@ -45,4 +47,9 @@ if filereadable(".vimrc.local")
 endif
 
 call plug#begin('~/.vim/plugged')
+Plug 'itchyny/lightline.vim'
 call plug#end()
+
+let g:lightline = {
+      \ 'colorscheme': 'solarized',
+      \ }
