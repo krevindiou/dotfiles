@@ -15,7 +15,7 @@ backup:
 		cp -Rf ~/.vim $(BACKUP_DIR)/vim; \
 	fi
 	@if test -e ~/.vimrc; then \
-		cp ~/.vimrc $(BACKUP_DIR)/vimrc; \
+		cp ~/.vimrc $(BACKUP_DIR)/.vimrc; \
 	fi
 	@if test -e ~/.gitignore_global; then \
 		cp ~/.gitignore_global $(BACKUP_DIR)/.gitignore_global; \
@@ -37,7 +37,7 @@ install-vim:
 	@echo "* VIM config..."
 	@rm -rf ~/.vim
 	@mkdir ~/.vim
-	@cp -f $(DOTFILES_DIR)/vimrc ~/.vimrc
+	@cp -f $(DOTFILES_DIR)/.vimrc ~/.vimrc
 	@curl -fLo ~/.vim/colors/solarized.vim --create-dirs https://raw.githubusercontent.com/altercation/vim-colors-solarized/master/colors/solarized.vim
 	@curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 	@vim -c 'PlugInstall' -c 'x!' -c 'x!'
