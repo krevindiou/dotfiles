@@ -20,6 +20,9 @@ backup:
 	@if test -e ~/.gitignore_global; then \
 		cp ~/.gitignore_global $(BACKUP_DIR)/.gitignore_global; \
 	fi
+	@if test -e ~/.gitconfig; then \
+		cp ~/.gitconfig $(BACKUP_DIR)/.gitconfig; \
+	fi
 
 install-bash-it:
 	@echo "* Bash it config..."
@@ -41,3 +44,6 @@ install-vim:
 
 install-git:
 	@cp -f $(DOTFILES_DIR)/.gitignore_global ~/.gitignore_global
+	@cp -f $(DOTFILES_DIR)/.gitconfig ~/.gitconfig
+	@sudo curl -fLo /usr/local/bin/diff-so-fancy --create-dirs https://raw.githubusercontent.com/so-fancy/diff-so-fancy/master/third_party/build_fatpack/diff-so-fancy
+	@sudo chmod +x /usr/local/bin/diff-so-fancy
