@@ -6,6 +6,7 @@ install:
 	@$(MAKE) backup
 	@$(MAKE) install-bash-it
 	@$(MAKE) install-vim
+	@$(MAKE) install-git
 
 backup:
 	@echo "* config backup..."
@@ -15,6 +16,9 @@ backup:
 	fi
 	@if test -e ~/.vimrc; then \
 		cp ~/.vimrc $(BACKUP_DIR)/vimrc; \
+	fi
+	@if test -e ~/.gitignore_global; then \
+		cp ~/.gitignore_global $(BACKUP_DIR)/.gitignore_global; \
 	fi
 
 install-bash-it:
@@ -34,3 +38,6 @@ install-vim:
 	@curl -fLo ~/.vim/colors/solarized.vim --create-dirs https://raw.githubusercontent.com/altercation/vim-colors-solarized/master/colors/solarized.vim
 	@curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 	@vim -c 'PlugInstall' -c 'x!' -c 'x!'
+
+install-git:
+	@cp -f $(DOTFILES_DIR)/.gitignore_global ~/.gitignore_global
