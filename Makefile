@@ -30,7 +30,7 @@ install-bash-it:
 	@~/.bash_it/install.sh --silent
 	@bash -i -c 'bash-it enable alias git npm vagrant'
 	@bash -i -c 'bash-it enable completion docker docker-compose git makefile npm nvm ssh tmux vagrant'
-	@bash -i -c 'bash-it enable plugin powerline'
+	@bash -i -c 'bash-it enable plugin powerline nvm'
 	@sed -i 's/''bobby''/''powerline''/' ~/.bashrc
 
 install-vim:
