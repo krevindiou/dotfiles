@@ -36,6 +36,7 @@ install-vim:
 	@vim -c 'PlugInstall' -c 'x!' -c 'x!'
 
 install-git:
+	@echo "* Git config..."
 	@cp -f $(DOTFILES_DIR)/.gitignore_global ~/.gitignore_global
 	@cp -f $(DOTFILES_DIR)/.gitconfig ~/.gitconfig
 	@sudo curl -fLo /usr/local/bin/diff-so-fancy --create-dirs https://raw.githubusercontent.com/so-fancy/diff-so-fancy/master/third_party/build_fatpack/diff-so-fancy
