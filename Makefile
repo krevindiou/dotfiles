@@ -11,21 +11,11 @@ install:
 backup:
 	@echo "* config backup..."
 	@mkdir -p $(BACKUP_DIR)
-	@if test -e ~/.vim; then \
-		cp -Rf ~/.vim $(BACKUP_DIR)/vim; \
-	fi
-	@if test -e ~/.vimrc; then \
-		cp ~/.vimrc $(BACKUP_DIR)/.vimrc; \
-	fi
-	@if test -e ~/.gitignore_global; then \
-		cp ~/.gitignore_global $(BACKUP_DIR)/.gitignore_global; \
-	fi
-	@if test -e ~/.gitconfig; then \
-		cp ~/.gitconfig $(BACKUP_DIR)/.gitconfig; \
-	fi
-	@if test -e ~/.inputrc; then \
-		cp ~/.inputrc $(BACKUP_DIR)/.inputrc; \
-	fi
+	test -e ~/.vim && cp -Rf ~/.vim $(BACKUP_DIR)/vim
+	test -e ~/.vimrc && cp ~/.vimrc $(BACKUP_DIR)/.vimrc
+	test -e ~/.gitignore_global && cp ~/.gitignore_global $(BACKUP_DIR)/.gitignore_global
+	test -e ~/.gitconfig && cp ~/.gitconfig $(BACKUP_DIR)/.gitconfig
+	test -e ~/.inputrc && cp ~/.inputrc $(BACKUP_DIR)/.inputrc
 
 install-bash-it:
 	@echo "* Bash it config..."
