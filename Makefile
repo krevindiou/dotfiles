@@ -23,6 +23,9 @@ backup:
 	@if test -e ~/.gitconfig; then \
 		cp ~/.gitconfig $(BACKUP_DIR)/.gitconfig; \
 	fi
+	@if test -e ~/.inputrc; then \
+		cp ~/.inputrc $(BACKUP_DIR)/.inputrc; \
+	fi
 
 install-bash-it:
 	@echo "* Bash it config..."
