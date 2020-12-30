@@ -1,5 +1,5 @@
 " Plugins
-call plug#begin('~/.vim/plugged')
+call plug#begin()
 Plug 'altercation/vim-colors-solarized'
 Plug 'itchyny/lightline.vim'
 call plug#end()
