@@ -1,3 +1,9 @@
+" Plugins
+call plug#begin('~/.vim/plugged')
+Plug 'altercation/vim-colors-solarized'
+Plug 'itchyny/lightline.vim'
+call plug#end()
+
 " PHP
 autocmd FileType php noremap <C-L> :!/usr/bin/env php -l %<CR>
 autocmd BufWritePre *.php :%s/\s\+$//e
@@ -45,10 +51,6 @@ endif
 if filereadable(".vimrc.local")
     source .vimrc.local
 endif
-
-call plug#begin('~/.vim/plugged')
-Plug 'itchyny/lightline.vim'
-call plug#end()
 
 let g:lightline = {
       \ 'colorscheme': 'solarized',
