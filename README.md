@@ -1,11 +1,10 @@
 Installation
 ============
 
-    hash curl &>/dev/null || sudo aptitude install curl
-    hash vim &>/dev/null || sudo aptitude install vim-nox
-    hash make &>/dev/null || sudo aptitude install make
-    hash php &>/dev/null || sudo aptitude install php7.2-cli
-
-    git clone git://github.com/krevindiou/dotfiles.git dotfiles
-    cd dotfiles
-    make install
+    git clone https://github.com/krevindiou/dotfiles.git ~/.dotfiles
+    ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
+    ln -s ~/.dotfiles/.gitignore_global ~/.gitignore_global
+    ln -s ~/.dotfiles/.inputrc ~/.inputrc
+    ln -s ~/.dotfiles/.my.cnf ~/.my.cnf
+    ln -s ~/.dotfiles/.psqlrc ~/.psqlrc
+    ln -s ~/.dotfiles/.vimrc ~/.vimrc
