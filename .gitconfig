@@ -1,6 +1,3 @@
-[user]
-	name = krevindiou
-	email = krevindiou@users.noreply.github.com
 [color]
 	ui = auto
 [color "diff-highlight"]
@@ -43,3 +40,5 @@
 	autoupdate = true
 [rebase]
 	autostash=true
+[include]
+	path = ~/.gitconfig-local
