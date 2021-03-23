@@ -7,4 +7,5 @@ Installation
     ln -s ~/.dotfiles/.inputrc ~/.inputrc
     ln -s ~/.dotfiles/.my.cnf ~/.my.cnf
     ln -s ~/.dotfiles/.psqlrc ~/.psqlrc
+    ln -s ~/.dotfiles/.tmux.conf ~/.tmux.conf
     ln -s ~/.dotfiles/.vimrc ~/.vimrc
